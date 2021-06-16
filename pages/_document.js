@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
           <script
             src="https://static.goqubit.com/smartserve-5831.js"
-            async
+            å
             defer
           ></script>
         </Head>

@@ -62,7 +62,7 @@ export default function FashionPlp(props) {
   return (
     <Grid container direction="column" justify="flex-start">
       <Grid item>
-        <div className={classes.banner}>
+        <div className={classes.banner} id="fashionBanner">
           <Typography style={{ color: "white" }} variant="h1">
             {props.data.section}
           </Typography>
@@ -100,6 +100,7 @@ export default function FashionPlp(props) {
                       className={classes.media}
                       image={product.images[0]}
                       title={product.name}
+                      id={`fashionPicture-${index}`}
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
