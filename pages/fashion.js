@@ -15,16 +15,6 @@ export default function Ecommerce() {
     setLoading(false)
   }, [])
 
-  React.useEffect(() => {
-    window.uv.emit("ecView", {
-      type: "category",
-      subtypes: ["Home"],
-      language: "en-gb",
-      country: "GB",
-      currency: "GBP",
-    })
-  }, [])
-
   return (
     <Layout>
       <Head>

@@ -39,28 +39,6 @@ export default function beautyPdp() {
     const productIndex = products.findIndex(findProduct)
     setProductData(products[productIndex])
     setLoading(false)
-    uv.emit("ecView", {
-      type: "category",
-      subtypes: ["product"],
-      language: "en-gb",
-      country: "GB",
-      currency: "GBP",
-    })
-    uv.emit("ecProduct", {
-      product: {
-        productId: result.data.beauty.products[productIndex].productId,
-        sku: result.data.beauty.products[productIndex].sku,
-        name: result.data.beauty.products[productIndex].name,
-        description: result.data.beauty.products[productIndex].description,
-        categories: result.data.beauty.products[productIndex].categories,
-        price: result.data.beauty.products[productIndex].price,
-        originalPrice: result.data.beauty.products[productIndex].price,
-        url: result.data.beauty.products[productIndex].url,
-        images: result.data.beauty.products[productIndex].images,
-        stock: result.data.beauty.products[productIndex].stock,
-      },
-      eventType: "detail",
-    })
   }, [])
 
   const addToBasket = () => {

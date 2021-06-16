@@ -39,28 +39,6 @@ export default function hgPdp() {
     const productIndex = products.findIndex(findProduct)
     setProductData(products[productIndex])
     setLoading(false)
-    uv.emit("ecView", {
-      type: "category",
-      subtypes: ["product"],
-      language: "en-gb",
-      country: "GB",
-      currency: "GBP",
-    })
-    uv.emit("ecProduct", {
-      product: {
-        productId: result.data.homeGarden.products[productIndex].productId,
-        sku: result.data.homeGarden.products[productIndex].sku,
-        name: result.data.homeGarden.products[productIndex].name,
-        description: result.data.homeGarden.products[productIndex].description,
-        categories: result.data.homeGarden.products[productIndex].categories,
-        price: result.data.homeGarden.products[productIndex].price,
-        originalPrice: result.data.homeGarden.products[productIndex].price,
-        url: result.data.homeGarden.products[productIndex].url,
-        images: result.data.homeGarden.products[productIndex].images,
-        stock: result.data.homeGarden.products[productIndex].stock,
-      },
-      eventType: "detail",
-    })
   }, [])
 
   const addToBasket = () => {

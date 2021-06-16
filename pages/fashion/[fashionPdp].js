@@ -38,28 +38,6 @@ export default function fashionPdp() {
     const productIndex = products.findIndex(findProduct)
     setProductData(products[productIndex])
     setLoading(false)
-    uv.emit("ecView", {
-      type: "category",
-      subtypes: ["product"],
-      language: "en-gb",
-      country: "GB",
-      currency: "GBP",
-    })
-    uv.emit("ecProduct", {
-      product: {
-        productId: result.data.fashion.products[productIndex].productId,
-        sku: result.data.fashion.products[productIndex].sku,
-        name: result.data.fashion.products[productIndex].name,
-        description: result.data.fashion.products[productIndex].description,
-        categories: result.data.fashion.products[productIndex].categories,
-        price: result.data.fashion.products[productIndex].price,
-        originalPrice: result.data.fashion.products[productIndex].price,
-        url: result.data.fashion.products[productIndex].url,
-        images: result.data.fashion.products[productIndex].images,
-        stock: result.data.fashion.products[productIndex].stock,
-      },
-      eventType: "detail",
-    })
   }, [])
 
   const addToBasket = () => {
