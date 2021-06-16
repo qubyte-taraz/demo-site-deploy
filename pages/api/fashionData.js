@@ -1,0 +1,80 @@
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+export default (req, res) => {
+  res.status(200).json({
+    //section data
+    fashion: {
+      section: "Fashion",
+      banner:
+        "https://www.qubit.com/wp-content/uploads/2018/11/Qubit_Solution_Fashion_02.jpg",
+      categories: ["Jeans", "Dresses", "Shirts", "Children's"],
+      products: [
+        {
+          categories: ["Jeans"],
+          description: "Premium denim",
+          images: ["https://i.ibb.co/42R8ZY8/jeans.jpg "],
+          name: "Jeans",
+          price: { currency: "GBP", value: 20 },
+          productId: "540210823221",
+          sku: 7012267065401,
+          stock: 1,
+          url: "https://qshopdemo.myshopify.com",
+        },
+        {
+          categories: ["Dresses"],
+          description: "Premium cotton",
+          images: ["https://i.ibb.co/dtT4W9d/dress.jpg"],
+          name: "Red Dress",
+          price: { currency: "GBP", value: 20 },
+          productId: "540210823222",
+          sku: 7012267065402,
+          stock: 1,
+          url: "https://qshopdemo.myshopify.com",
+        },
+        {
+          categories: ["Dresses"],
+          description: "Premium cotton",
+          images: ["https://i.ibb.co/HzbVC0H/dress2.jpg"],
+          name: "Green Dress",
+          price: { currency: "GBP", value: 398 },
+          productId: "540210823223",
+          sku: 7012267065403,
+          stock: 1,
+          url: "https://qshopdemo.myshopify.com",
+        },
+        {
+          categories: ["Shirts"],
+          description: "Premium cotton",
+          images: ["https://i.ibb.co/ZVTZQ55/shirt.jpg"],
+          name: "Polo Shirt",
+          price: { currency: "GBP", value: 30 },
+          productId: "540210823224",
+          sku: 7012267065404,
+          stock: 1,
+          url: "https://qshopdemo.myshopify.com",
+        },
+        {
+          categories: ["Shirts"],
+          description: "Premium cotton",
+          images: ["https://i.ibb.co/Vvx0MNk/shirt2.jpg"],
+          name: "Khaki Shirt",
+          price: { currency: "GBP", value: 20 },
+          productId: "540210823225",
+          sku: 7012267065405,
+          stock: 1,
+          url: "https://qshopdemo.myshopify.com",
+        },
+        {
+          categories: ["Children's"],
+          description: "Children's Waffle Dress",
+          images: ["https://i.ibb.co/vm1BVtv/children.jpg"],
+          name: "Children's Dress",
+          price: { currency: "GBP", value: 15 },
+          productId: "540210823226",
+          sku: 7012267065406,
+          stock: 1,
+          url: "https://qshopdemo.myshopify.com",
+        },
+      ],
+    },
+  })
+}
