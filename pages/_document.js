@@ -9,6 +9,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <script src="../test.js"></script>
           <script
             src="https://static.goqubit.com/smartserve-5831.js"
             å
